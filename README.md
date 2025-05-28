@@ -5,7 +5,7 @@ It's like a digital version of a physical shop.
 Key Features:
 Customer Focused,
 Scalable Platform,
-Secure Transactions,
+Secure Transactions
 
 Technologies Used:
 Frontend-HTML,CSS,JAVASCRIPT

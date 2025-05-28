@@ -3,9 +3,9 @@ An e-commerce store is a website or online platform where people can buy and sel
 It's like a digital version of a physical shop.
 
 Key Features:
-Customer Focused
-Scalable Platform
-Secure Transactions
+Customer Focused,
+Scalable Platform,
+Secure Transactions,
 
 Technologies Used:
 Frontend-HTML,CSS,JAVASCRIPT

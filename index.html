@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Commerce Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>SmartShop</h1>
+  <nav>
+    <a href="#" onclick="showLogin()">Login</a>
+    <a href="#" onclick="viewCart()">Cart 🛒 (<span id="cart-count">0</span>)</a>
+    <a href="#" onclick="logout()" id="logout-link" style="display: none;">Logout</a>
+  </nav>
+</header>
+
+<section class="login-form" id="login-section">
+  <h2>Login</h2>
+  <input type="text" id="username" placeholder="Enter Username" />
+  <input type="password" id="password" placeholder="Enter Password" />
+  <button class="btn" onclick="login()">Login</button>
+</section>
+
+<section class="store" id="store-section" style="display: none;">
+  <h2>Welcome, <span id="user-display"></span>!</h2>
+
+  <label for="category">Filter by category:</label>
+  <select id="category" onchange="filterProducts()">
+    <option value="all">All</option>
+    <option value="electronics">Electronics</option>
+    <option value="fashion">Fashion</option>
+    <option value="books">Books</option>
+    <option value="personalcare">Personal Care</option>
+  </select>
+
+  <div class="products" id="product-list">
+     <div class="product-card">
+    <img src="Images/smartphone(nokia).jpg" alt="smartphone(nokia)">
+    <h3>smartphone(nokia)</h3>
+    <p>Rs.14,999</p>
+    <button class="btn" onclick="addToCart('smartphone(nokia)')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="Images/headphones.jpg" alt="headphones">
+    <h3>headphones</h3>
+    <p>Rs.999</p>
+    <button class="btn" onclick="addToCart('headphones')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="Images/T-shirt.jpg" alt="T-shirt">
+    <h3>T-shirt</h3>
+    <p>Rs.899</p>
+    <button class="btn" onclick="addToCart('T-shirt')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="Images/novelbook(never ending sky).jpg" alt="novelbook(never ending sky)">
+    <h3>novelbook(never ending sky)</h3>
+    <p>Rs.350</p>
+    <button class="btn" onclick="addToCart('novelbook(never ending sky)')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="Images/Mysore sandal soap.jpg" alt="Mysore sandal soap">
+    <h3>Mysore sandal soap</h3>
+    <p>Rs.219</p>
+    <button class="btn" onclick="addToCart('Mysore sandal soap')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="Images/dell laptop.png" alt="dell laptop">
+    <h3>dell laptop</h3>
+    <p>Rs.45,599</p>
+    <button class="btn" onclick="addToCart('dell laptop')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="Images/washing machine.webp" alt="washing machine">
+    <h3>washing machine</h3>
+    <p>Rs.25,799</p>
+    <button class="btn" onclick="addToCart('washing machine')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="Images/cotton chudidar.webp" alt="cotton chudidar">
+    <h3>cotton chudidar</h3>
+    <p>Rs.1,599</p>
+    <button class="btn" onclick="addToCart('cotton chudidar')">Add to Cart</button>
+  </div>
+
+  <div class="cart" id="cart-section" style="display: none;">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+  </div>
+</section>
+
+<footer>
+  2025 SmartShop. All rights reserved.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
